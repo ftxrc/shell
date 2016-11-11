@@ -1,6 +1,5 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/ftxrc/terminal/master/assets/prompt.png">
-  <hr>
 </p>
 
 # ftxrc's terminal setup
