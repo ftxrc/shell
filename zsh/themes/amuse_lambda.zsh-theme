@@ -8,9 +8,13 @@ rbenv_version() {
   rbenv version 2>/dev/null | awk '{print $1}'
 }
 
+icon() {
+  echo "%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})λ%{$reset_color%}"
+}
+
 PROMPT='
-%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%}
-%{$fg_bold[green]%}λ%{$reset_color%} '
+$(icon) %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%}
+%{$fg_bold[green]%}➜ %{$reset_color%} '
 
 # Must use Powerline font, for \uE0A0 to render.
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[magenta]%}\uE0A0 "
@@ -26,3 +30,5 @@ else
     RPROMPT='%{$fg_bold[red]%}$(rbenv_version)%{$reset_color%}'
   fi
 fi
+
+# fuck
