@@ -1,4 +1,4 @@
-# terminal<sup>λ</sup>
+# hello<sup>λ</sup>
 Here are my dotfile configs for various shells, including aliases and prompts. Also other dotfiles I might use for other programs.
 
 ### Installation
